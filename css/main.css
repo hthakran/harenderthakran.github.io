@@ -688,7 +688,23 @@ ul {
     }
     .ham-bars img{
         width: 5rem;
+        /* transition: var(--main-transition); */
+        animation: infibounce 0.5s linear  infinite forwards;
     }
+    /* -- Adding animations to ham-bars --- */
+    @keyframes infibounce {
+        0%{
+            transform: scale(1);
+        }
+        50%{
+            transform: scale(0.9);
+        }
+        100%{
+            transform: scale(1.1);
+        }
+    }
+
+    /* -- End of Adding animations to ham-bars --- */
     .hdr-grid{
         grid-template-columns: 1fr 1fr;
     }

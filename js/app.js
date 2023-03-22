@@ -60,6 +60,19 @@ let hamMenu = document.querySelector('.ham-bars');
 
 let sideBar = document.querySelector('.side-bar');
 
+// below code is for closing the nav-bar when any nav-item is clicked
+
+let closeSideBar = document.querySelector('.side-bar-items').children;
+
+let closeSideBarArr = Array.from(closeSideBar);
+
+for(let indexofCSBA = 0; indexofCSBA<closeSideBarArr.length; ++indexofCSBA){
+  closeSideBarArr[indexofCSBA].addEventListener('click',function(){
+    sideBar.classList.remove('show-side-bar');
+  })
+}
+
+
 hamMenu.addEventListener('click',function(){
     sideBar.classList.add('show-side-bar');
 });
