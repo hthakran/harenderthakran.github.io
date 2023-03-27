@@ -81,3 +81,14 @@ closeBtn.addEventListener('click',function(){
     sideBar.classList.remove('show-side-bar');
 });
 
+// Form Fixing ...
+
+window.onbeforeunload = () => {
+  for(const form of document.getElementsByTagName('form')) {
+    form.reset();
+  }
+}
+
+let copyrightYear = document.querySelector('.foot-para');
+
+copyrightYear.innerHTML = "&copy; " + new Date().getFullYear() + " Harender Thakran - All Rights Reserved";
